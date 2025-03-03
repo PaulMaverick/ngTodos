@@ -12,15 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideFirebaseApp(() => initializeApp({
-      projectId: "startup-e84fd",
-      appId: "1:830679690152:web:3517acea4ec8b20d6c8b9d",
-      storageBucket: "startup-e84fd.firebasestorage.app",
-      apiKey: "AIzaSyDhVy55cyJ3wQ9x1efZO6qHG5M8HgY2bq8",
-      authDomain: "startup-e84fd.firebaseapp.com",
-      messagingSenderId: "830679690152",
-      measurementId: "G-L42CMFTRFL" })
-    ),
+    
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())]
 };
