@@ -9,4 +9,8 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
   title = signal("This is my first angular app!")
+
+  logout(): void {
+    console.log('Logging out')
+  }
 }

@@ -13,5 +13,17 @@ export const routes: Routes = [
     loadComponent: () => {
       return import('./todos/todos.component').then(m => m.TodosComponent);
     }
+  },
+  {
+    path: 'login',
+    loadComponent: () => {
+      return import('./auth/login/login.component').then(m => m.LoginComponent);
+    }
+  },
+  {
+    path: 'signup',
+    loadComponent: () => {
+      return import('./auth/signup/signup.component').then(m => m.SignupComponent);
+    }
   }
 ];
