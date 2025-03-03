@@ -1,24 +1,28 @@
 <article>
   <h1>Sign Up</h1>
 
-  <form>
+  @if(errorMessage) {
+    <div>{{ errorMessage }}</div>
+  }
+
+  <form (ngSubmit)="submitHandler()" [formGroup]="form">
     <div>
       <label>Username: </label>
-      <input type="username" name="username" id="username"/>
+      <input type="username" formControlName="username" placeholder="username"/>
     </div>
       <div>
         <label>Email: </label>
-        <input type="email" name="email" id="email"/>
+        <input type="email" formControlName="email" placeholder="example@email.com"/>
       </div>
       <div>
         <label>Password: </label>
-        <input type="password" name="password" id="password"/>
+        <input type="password" formControlName="password" placeholder="password"/>
       </div>
       <div>
-          <button type="submit">Login</button>
+          <button type="submit">Signup</button>
       </div>
   </form>
   <div>
-    <p>Already have an account? Login <span routerLink="/login">here</span></p>
+    <p>Already have an account? Login <a routerLink="/login">here</a></p>
   </div>
 </article>
