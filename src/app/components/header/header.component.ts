@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +10,9 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
   title = signal("This is my first angular app!")
+  authService = inject(AuthService)
 
   logout(): void {
-    console.log('Logging out')
+      this.authService.logout()
   }
 }
