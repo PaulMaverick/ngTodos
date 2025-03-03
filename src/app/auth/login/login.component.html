@@ -2,27 +2,29 @@
   <article>
     <header><h1>Login</h1></header>
 
-    <form (ngSubmit)="onSubmit()">
+    <form [formGroup]="form" (ngSubmit)="submitHandler()">
         <div>
           <label>Email: </label>
           <input
             type="email"
-            name="email"
-            id="email"/>
+            placeholder="example@email.com"
+            formControlName="email"
+            />
         </div>
         <div>
-          <label>Email: </label>
+          <label>Password: </label>
           <input
-            type="email"
-            name="email"
-            id="email"/>
+            type="password"
+            placeholder="password"
+            formControlName="password"
+            />
         </div>
         <div>
             <button type="submit">Login</button>
         </div>
     </form>
     <div>
-      <p>Create a new account <span routerLink="/singup">here</span></p>
+      <p>Create a new Account <a routerLink="/signup">here</a></p>
     </div>
   </article>
 </section>
