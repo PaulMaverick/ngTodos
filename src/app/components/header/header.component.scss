@@ -1,0 +1,22 @@
+header {
+  padding-inline: 16px;
+  padding-block: 8px;
+  background-color: #333;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5em;
+}
+
+li {
+  list-style: none;
+}
+
+li,
+span {
+  cursor: pointer;
+}
